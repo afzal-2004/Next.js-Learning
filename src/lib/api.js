@@ -7,7 +7,7 @@ export const Users = async () => {
   return res.json();
 };
 
-export const User = async () => {
+export const User = async (id) => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
   if (!res.ok) {
     throw new Error("Failed to Access  user details ");
